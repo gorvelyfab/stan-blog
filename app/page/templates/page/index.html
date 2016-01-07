@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Homepage{% endblock %}
+{% block body %}
+    <!-- +++++ Welcome Section +++++ -->
+    <div id="ww">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 centered">
+                    <img src="{% static 'img/user.png' %}" alt="Stanley">
+                    <h1>Hi, I am Stanley!</h1>
+                    <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded by BlackTie.co. A really simple theme for those wanting to showcase their work with a cute & clean style.</p>
+                    <p>Please, consider to register to <a href="http://eepurl.com/IcgkX">our newsletter</a> to be updated with our latest themes and freebies. Like always, you can use this theme in any project freely. Share it with your friends.</p>
+
+                </div><!-- /col-lg-8 -->
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /ww -->
+
+
+    <!-- +++++ Projects Section +++++ -->
+
+    <div class="container pt">
+        <div class="row centered">
+            {% for work in works %}
+                <div class="col-lg-4 mt">
+                    <a class="zoom green" href="{% url 'work:show' work.slug %}"><img class="img-responsive" src="{{ work.workpicture_set.all.0 }}" alt="" /></a>
+                    <p>{{ work.name|upper }}</p>
+                </div>
+            {% endfor %}
+        </div><!-- /row -->
+    </div><!-- /container -->
+{% endblock %}

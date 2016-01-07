@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static markdown_deux_tags %}
+{% block title %}Blog{% endblock %}
+{% block body %}
+    <!-- +++++ Posts Lists +++++ -->
+
+    {% for post in posts %}
+        <div id="{% cycle 'grey' 'white' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <p><img src="{% static 'img/user.png' %}" width="50px" height="50px"> <ba>Stanley Stinson</ba></p>
+                        <p><bd>{{ post.created_at|date:'M d, Y' }}</bd></p>
+                        <h4>{{ post.name }}</h4>
+                        <p>{{ post.content|markdown|truncatewords_html:30 }}</p>
+                        <p><a href="{% url 'blog:post_show' post.slug %}">Continue Reading...</a></p>
+                    </div>
+
+                </div><!-- /row -->
+            </div> <!-- /container -->
+        </div><!-- /grey -->
+    {% endfor %}
+{% endblock %}
+
+

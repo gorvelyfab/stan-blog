@@ -1,0 +1,88 @@
+# Tag
+- model: blog.Tag
+  pk: 1
+  fields:
+    name: 'PHP'
+    slug: 'php'
+
+- model: blog.Tag
+  pk: 2
+  fields:
+    name: 'JavaScript'
+    slug: 'javascript'
+
+- model: blog.Tag
+  pk: 3
+  fields:
+    name: 'Python'
+    slug: 'python'
+
+- model: blog.Tag
+  pk: 4
+  fields:
+    name: 'Ruby'
+    slug: 'ruby'
+
+- model: blog.Tag
+  pk: 5
+  fields:
+    name: 'Symfony'
+    slug: 'symfony'
+
+- model: blog.Tag
+  pk: 6
+  fields:
+    name: 'Django'
+    slug: 'django'
+
+- model: blog.Tag
+  pk: 7
+  fields:
+    name: 'Laravel'
+    slug: 'laravel'
+
+# Post
+- model: blog.Post
+  pk: 1
+  fields:
+    name: 'Getting started on Symfony'
+    slug: 'getting-started-on-symfony'
+    tags: [1, 5]
+    created_at: '2015-10-20 06:53:10'
+    updated_at: '2015-10-20 06:53:15'
+    content: |
+      A sexy mistake. Can we have Bender Burgers again? And then the battle's not so bad? Guards! Bring me the forms I need to fill out to have her taken away! But I know you in the future. I cleaned your poop.
+      We'll need to have a look inside you with this camera. With a warning label this big, you know they gotta be fun! My fellow Earthicans, as I have explained in my book 'Earth in the Balance'', and the much more popular ''Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.
+
+      Shut up and get to the point! Shinier than yours, meatbag. We'll go deliver this crate like professionals, and then we'll go home. No argument here. You wouldn't. Ask anyway!
+      With a warning label this big, you know they gotta be fun! Enough about your promiscuous mother, Hermes! We have bigger problems. This is the worst part. The calm before the battle. You don't know how to do any of those.
+
+- model: blog.Post
+  pk: 2
+  fields:
+    name: 'Discover the FOS User Bundle'
+    slug: 'discover-the-fos-user-bundle'
+    tags: [1, 5]
+    created_at: '2015-10-20 06:55:10'
+    updated_at: '2015-10-20 06:55:15'
+    content: |
+      A sexy mistake. Can we have Bender Burgers again? And then the battle's not so bad? Guards! Bring me the forms I need to fill out to have her taken away! But I know you in the future. I cleaned your poop.
+      We'll need to have a look inside you with this camera. With a warning label this big, you know they gotta be fun! My fellow Earthicans, as I have explained in my book 'Earth in the Balance'', and the much more popular ''Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.
+
+      Shut up and get to the point! Shinier than yours, meatbag. We'll go deliver this crate like professionals, and then we'll go home. No argument here. You wouldn't. Ask anyway!
+      With a warning label this big, you know they gotta be fun! Enough about your promiscuous mother, Hermes! We have bigger problems. This is the worst part. The calm before the battle. You don't know how to do any of those.
+
+- model: blog.Post
+  pk: 3
+  fields:
+    name: 'Write your first app with Django framework'
+    slug: 'write-your-first-app-with-django-framework'
+    tags: [3, 6]
+    created_at: '2015-10-20 06:57:10'
+    updated_at: '2015-10-20 06:57:15'
+    content: |
+      A sexy mistake. Can we have Bender Burgers again? And then the battle's not so bad? Guards! Bring me the forms I need to fill out to have her taken away! But I know you in the future. I cleaned your poop.
+      We'll need to have a look inside you with this camera. With a warning label this big, you know they gotta be fun! My fellow Earthicans, as I have explained in my book 'Earth in the Balance'', and the much more popular ''Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.
+
+      Shut up and get to the point! Shinier than yours, meatbag. We'll go deliver this crate like professionals, and then we'll go home. No argument here. You wouldn't. Ask anyway!
+      With a warning label this big, you know they gotta be fun! Enough about your promiscuous mother, Hermes! We have bigger problems. This is the worst part. The calm before the battle. You don't know how to do any of those.

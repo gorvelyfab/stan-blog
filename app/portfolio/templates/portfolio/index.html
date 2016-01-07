@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Portfolio{% endblock %}
+{% block body %}
+    <!-- +++++ Projects Section +++++ -->
+
+    <div class="container pt">
+        <div class="row mt">
+            <div class="col-lg-6 col-lg-offset-3 centered">
+                <h3>MY WORK</h3>
+                <hr>
+                <p>Show your work here. Dribbble shots from the awesome designer <a href="http://dribbble.com/wanderingbert">David Creighton-Pester</a>.</p>
+            </div>
+        </div>
+        <div class="row centered">
+            {% for work in works %}
+                <div class="col-lg-4 mt">
+                    <a class="zoom green" href="{% url 'work:show' work.slug %}"><img class="img-responsive" src="{{ work.workpicture_set.all.0 }}" alt="" /></a>
+                    <p>{{ work.name|upper }}</p>
+                </div>
+            {% endfor %}
+        </div><!-- /row -->
+    </div><!-- /container -->
+{% endblock %}

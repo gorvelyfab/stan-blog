@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+    <!-- +++++ Contact Section +++++ -->
+
+    <div class="container pt">
+        <div class="row mt">
+            <div class="col-lg-6 col-lg-offset-3 centered">
+                <h3>CONTACT ME</h3>
+                <hr>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+        </div>
+        <div class="row mt">
+            <div class="col-lg-8 col-lg-offset-2">
+                <form role="form" action="{% url 'page:contact' %}" method="POST">
+                  {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="form-group">
+                            {{ field }}
+                            <br>
+                        </div>
+                    {% endfor %}
+
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+{% endblock %}

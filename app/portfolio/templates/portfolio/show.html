@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ work.name }}{% endblock %}
+{% block body %}
+    <!-- +++++ Projects Section +++++ -->
+
+    <div class="container pt">
+        <div class="row mt">
+            <div class="col-lg-6 col-lg-offset-3 centered">
+                <h3>{{ work.name }}</h3>
+                <hr>
+                <p>{{ work.summary }}</p>
+            </div>
+        </div>
+        <div class="row mt centered">
+            <div class="col-lg-8 col-lg-offset-2">
+                {% for picture in work.workpicture_set.all %}
+                    <p><img class="img-responsive" src="{{ picture }}" alt=""></p>
+                {% endfor %}
+
+                <p><bt>Client: <a href="{{ work.client_url }}">{{ work.client_name }}</a></bt> -
+                    <bt>Type:
+                        {% for category in work.categories.all %}
+                            <a href="#">{{ category.name }}</a>
+                        {% endfor %}
+                    </bt> -
+                    <bt>Date: <a href="#">{{ work.created_at|date:'M Y' }}</a></bt>
+                </p>
+            </div>
+        </div><!-- /row -->
+    </div><!-- /container -->
+{% endblock %}
