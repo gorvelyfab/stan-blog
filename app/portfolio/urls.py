@@ -1,8 +1,10 @@
-from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
+app_name = 'work'
+
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^(?P<slug>[a-z0-9-]+)$', views.show, name='show'),
+    path('', views.index, name='index'),
+    path('<slug:slug>', views.show, name='show'),
 ]

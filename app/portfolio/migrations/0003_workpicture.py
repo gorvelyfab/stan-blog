@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, verbose_name='ID', serialize=False, primary_key=True)),
                 ('src', models.ImageField(upload_to='')),
-                ('work', models.ForeignKey(to='portfolio.Work')),
+                ('work', models.ForeignKey(to='portfolio.Work', on_delete=models.CASCADE)),
             ],
         ),
     ]

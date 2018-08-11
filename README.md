@@ -1,6 +1,6 @@
 ## Stanley Blog
 
-simple blog and portfolio application build with Django 1.8.5
+Simple Demo Blog and Portfolio Application build with [Django 2.1](https://docs.djangoproject.com/en/2.1/)
 
 ### Install
 
@@ -23,11 +23,13 @@ pip install -r requirements.txt
 
 ### Database setup
 
-please ensure you that PostgreSQL is installed on your system
+The default DB settings use SQLite
 
-you should also edit app/settings.py for your personal requirements
+But if you wish you can use PostgreSQL, for this please ensure you that PostgreSQL is installed on your system
 
-the actual database settings like this:
+you should also edit `app/settings.py` for your personal requirements
+
+Example configuration for PostgreSQL:
 
 ```
 DATABASES = {
@@ -63,7 +65,7 @@ python manage.py createsuperuser
 you can also load fixtures data
 
 ```
-python manage.py loaddata data.yaml
+python manage.py loaddata data
 ```
 
 ### Running application
@@ -87,3 +89,4 @@ contact me
 
 [Author]
 Gorvely Tasida <gorvelyfab@gmail.com>
+Website: [braindy.io](https://braindy.io)

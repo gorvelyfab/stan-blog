@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static markdown_deux_tags %}
 {% block title %}{{ work.name }}{% endblock %}
 {% block body %}
     <!-- +++++ Projects Section +++++ -->
@@ -9,7 +9,7 @@
             <div class="col-lg-6 col-lg-offset-3 centered">
                 <h3>{{ work.name }}</h3>
                 <hr>
-                <p>{{ work.summary }}</p>
+                <p>{{ work.summary|markdown }}</p>
             </div>
         </div>
         <div class="row mt centered">

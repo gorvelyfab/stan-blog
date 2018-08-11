@@ -30,7 +30,7 @@ class Work(models.Model):
 
 class WorkPicture(models.Model):
     src = models.ImageField()
-    work = models.ForeignKey('work')
+    work = models.ForeignKey('work', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.src.url
